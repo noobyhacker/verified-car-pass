@@ -174,59 +174,6 @@ export async function getPendingReviews(): Promise<PendingReview[]> {
   });
 }
 
-// ─── Admin: approve / reject inspection ──────────────────────────────────────
-
-export async function approveInspection(inspectionId: string): Promise<{ certificateUid: string; publicUrl: string } | null> {
-  if (!isSupabaseEnabled) {
-    console.warn("approveInspection: Supabase not enabled, no-op");
-    return null;
-  }
-
-  // 1. Lock the inspection
-  const { data: ins, error: updateErr } = await supabase!
-    .from("inspections")
-    .update({ admin_status: "approved", locked_at: new Date().toISOString() })
-    .eq("id", inspectionId)
-    .select("*")
-    .single();
-
-  if (updateErr || !ins) return null;
-
-  // 2. Activate the vehicle
-  await supabase!.from("vehicles").update({ status: "active" }).eq("vin", ins.vin);
-
-  // 3. Generate certificate
-  const year = new Date().getFullYear();
-  const uid = ins.public_slug.toUpperCase();
-  const certificateUid = `SST-${year}-${uid}`;
-  const publicUrl = `/car/${ins.public_slug}`;
-
-  const { error: certErr } = await supabase!.from("certificates").insert({
-    inspection_id: inspectionId,
-    vin: ins.vin,
-    certificate_uid: certificateUid,
-    public_url: publicUrl,
-  });
-
-  if (certErr) return null;
-
-  return { certificateUid, publicUrl };
-}
-
-export async function rejectInspection(inspectionId: string, notes?: string): Promise<boolean> {
-  if (!isSupabaseEnabled) {
-    console.warn("rejectInspection: Supabase not enabled, no-op");
-    return false;
-  }
-
-  const { error } = await supabase!
-    .from("inspections")
-    .update({ admin_status: "rejected", admin_notes: notes ?? null })
-    .eq("id", inspectionId);
-
-  return !error;
-}
-
 // ─── Inspector: submit new inspection ────────────────────────────────────────
 
 export async function submitInspection(
