@@ -42,13 +42,13 @@ export function CertificateFooter({ lockedAt, certificateUid }: CertificateFoote
         {/* Company info */}
         <div className="pt-2 border-t border-border flex flex-wrap gap-x-4 gap-y-1">
           <p className="text-[11px] text-muted-foreground font-body">
-            <span className="font-semibold text-foreground">SS Trading Korea</span>
+            <span className="font-semibold text-foreground">Verified Car Pass</span>
           </p>
           <p className="text-[11px] text-muted-foreground font-body">
-            contact@sstrading.kr
+            info@verifiedcarpass.com
           </p>
           <p className="text-[11px] text-muted-foreground font-body">
-            +82-10-0000-0000
+            +82-10-2705-8645
           </p>
         </div>
       </div>

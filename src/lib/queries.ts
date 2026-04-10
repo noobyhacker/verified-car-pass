@@ -190,7 +190,7 @@ export async function approveInspection(inspectionId: string): Promise<{ certifi
   // 3. Generate certificate
   const year = new Date().getFullYear();
   const uid = ins.public_slug.toUpperCase();
-  const certificateUid = `SST-${year}-${uid}`;
+  const certificateUid = `VCP-${year}-${uid}`;
   const publicUrl = `/car/${ins.public_slug}`;
 
   const { error: certErr } = await supabase!.from("certificates").insert({
@@ -229,7 +229,7 @@ export async function submitInspection(
     // Dev mode — just return a fake slug as before
     const { nanoid } = await import("nanoid");
     const slug = nanoid(6).toLowerCase();
-    return { slug, certUid: `SST-DEV-${nanoid(6).toUpperCase()}` };
+    return { slug, certUid: `VCP-DEV-${nanoid(6).toUpperCase()}` };
   }
 
   // 1. Upsert vehicle record
@@ -446,7 +446,7 @@ export async function writeAuditLog(entry: {
     entity_id: entry.entity_id,
     action: entry.action,
     performed_by: null,
-    performed_by_email: entry.performed_by_email ?? "admin@ss-trading.com",
+    performed_by_email: entry.performed_by_email ?? "admin@verifiedcarpass.com",
     changes: entry.changes ?? null,
   });
 }

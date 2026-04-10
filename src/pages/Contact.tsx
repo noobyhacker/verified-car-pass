@@ -4,16 +4,16 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle } from "lucide-react";
 
 const COMPANY = {
-  name: "SS Trading Korea",
+  name: "Verified Car Pass",
   phone: "+82-10-2705-8645",
   whatsapp: "https://wa.me/821027058645",
-  email: "info@sstrading.kr",
+  email: "info@verifiedcarpass.com",
   address: "Seoul, Republic of Korea",
   addressDetail: "Mapo-gu, Seoul 04108",
   hours: "Mon – Sat: 09:00 – 19:00 KST",
-  instagram: "https://instagram.com/sstrading.korea",
-  youtube: "https://youtube.com/@sstrading",
-  facebook: "https://facebook.com/sstrading.korea",
+  instagram: "https://instagram.com/verifiedcarpass",
+  youtube: "https://youtube.com/@verifiedcarpass",
+  facebook: "https://facebook.com/verifiedcarpass",
 };
 
 const SOCIAL = [
@@ -32,7 +32,7 @@ export default function Contact() {
     e.preventDefault();
     // Build WhatsApp pre-filled message
     const msg = encodeURIComponent(
-      `New inquiry from SS Trading Korea website\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCountry: ${form.country}\n\nMessage:\n${form.message}`
+      `New inquiry from Verified Car Pass website\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCountry: ${form.country}\n\nMessage:\n${form.message}`
     );
     window.open(`https://wa.me/821027058645?text=${msg}`, "_blank");
     setSent(true);
@@ -55,7 +55,7 @@ export default function Contact() {
             Get In Touch
           </p>
           <h1 className="font-display font-bold text-3xl text-white mb-3">
-            Contact SS Trading Korea
+            Contact Verified Car Pass
           </h1>
           <p className="font-body text-sm max-w-lg" style={{ color: "rgba(255,255,255,0.6)" }}>
             Whether you're sourcing a single vehicle or a fleet, our team in Seoul is ready to help.
@@ -305,8 +305,8 @@ export default function Contact() {
       {/* Footer */}
       <footer className="border-t border-border bg-card py-6 mt-8">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-display font-bold text-sm" style={{ color: "hsl(var(--primary))" }}>SS Trading Korea</p>
-          <p className="font-body text-xs text-muted-foreground">© 2025 SS Trading Korea. All rights reserved.</p>
+          <p className="font-display font-bold text-sm" style={{ color: "hsl(var(--primary))" }}>Verified Car Pass</p>
+          <p className="font-body text-xs text-muted-foreground">© 2025 Verified Car Pass. All rights reserved.</p>
           <div className="flex gap-3">
             {SOCIAL.map(({ label, href, icon }) => (
               <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>

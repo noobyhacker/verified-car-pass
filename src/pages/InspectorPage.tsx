@@ -745,7 +745,7 @@ export default function InspectorPage() {
         setIsSubmitting(false);
         return;
       }
-      setSubmittedCert({ uid: result.certUid || `SST-${new Date().getFullYear()}-${result.slug.toUpperCase()}`, slug: result.slug });
+      setSubmittedCert({ uid: result.certUid || `VCP-${new Date().getFullYear()}-${result.slug.toUpperCase()}`, slug: result.slug });
       setMode("success");
     } catch (err) {
       console.error("Submit error:", err);

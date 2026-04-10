@@ -37,7 +37,7 @@ async function writeAuditLog(db: ReturnType<typeof createClient>, entry: {
 }) {
   await db.from("audit_logs").insert({
     entity: entry.entity, entity_id: entry.entity_id, action: entry.action,
-    performed_by: null, performed_by_email: entry.performed_by_email ?? "admin@ss-trading.com",
+    performed_by: null, performed_by_email: entry.performed_by_email ?? "admin@verifiedcarpass.com",
     changes: entry.changes ?? null,
   });
 }
@@ -137,7 +137,7 @@ async function dispatch(db: ReturnType<typeof createClient>, action: string, p: 
       // Generate certificate
       const year = new Date().getFullYear();
       const uid = ins.public_slug.toUpperCase();
-      const certificateUid = `SST-${year}-${uid}`;
+      const certificateUid = `VCP-${year}-${uid}`;
       const publicUrl = `/car/${ins.public_slug}`;
 
       const { error: certErr } = await db.from("certificates").insert({
