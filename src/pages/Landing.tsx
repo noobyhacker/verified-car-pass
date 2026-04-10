@@ -12,8 +12,8 @@ const CURRENCY_OPTIONS = Object.entries(currencyRates).map(([code, data]) => ({
 }));
 
 const HERO_SLIDES = [
-  { img: "/hero-2.png", position: "center 20%" },
-  { img: "/hero-1.png", position: "center 30%" },
+  { img: "/hero-2.pn", position: "center 20%" },
+  { img: "/hero-1.pn", position: "center 30%" },
 ];
 
 const VEHICLE_TYPES = [
