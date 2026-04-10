@@ -22,10 +22,10 @@ const NAV_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-  { href: "https://wa.me/821027058645",           icon: "/icon-whatsapp.svg",  label: "WhatsApp" },
-  { href: "https://instagram.com/sstrading.korea", icon: "/icon-instagram.svg", label: "Instagram" },
-  { href: "https://facebook.com/sstrading.korea",  icon: "/icon-facebook.svg",  label: "Facebook" },
-  { href: "https://youtube.com/@sstrading",        icon: "/icon-youtube.svg",   label: "YouTube" },
+  { href: "https://wa.me/",           icon: "/icon-whatsapp.svg",  label: "WhatsApp" },
+  { href: "https://instagram.com/", icon: "/icon-instagram.svg", label: "Instagram" },
+  { href: "https://facebook.com/",  icon: "/icon-facebook.svg",  label: "Facebook" },
+  { href: "https://youtube.com/",        icon: "/icon-youtube.svg",   label: "YouTube" },
 ];
 
 const NAV_BG = "linear-gradient(160deg, #06101f 0%, #0b1e3a 40%, #0e2647 100%)";
@@ -48,7 +48,7 @@ export function Navbar() {
 
           {/* Left: contact info */}
           <div className="flex items-center gap-4">
-            <a href="tel:+821027058645"
+            <a href="tel:+8212345678"
               className="flex items-center gap-1.5 text-[11px] font-body transition-colors"
               style={{ color: "rgba(255,255,255,0.72)" }}
               onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
@@ -56,7 +56,7 @@ export function Navbar() {
               <Phone className="w-3 h-3 flex-shrink-0" />
               +82-10-2705-8645
             </a>
-            <a href="mailto:info@sstrading.kr"
+            <a href="mailto:info@webforge"
               className="hidden sm:flex items-center gap-1.5 text-[11px] font-body transition-colors"
               style={{ color: "rgba(255,255,255,0.55)" }}
               onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
@@ -122,7 +122,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center flex-shrink-0 py-1">
             <img
               src="/ss-trading-logo.png"
-              alt="SS Trading Korea"
+              alt="WebForge"
               className="h-9 w-auto object-contain"
               style={{ filter: "none" }}
             />
