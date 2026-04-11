@@ -31,7 +31,7 @@ export default function AboutUs() {
       <div style={{ background: "linear-gradient(135deg, #0d1f3c 0%, #1A3C6E 100%)" }}>
         <div className="container py-16">
           <p className="font-mono-data text-[11px] tracking-widest uppercase mb-3" style={{ color: "#E8A830" }}>
-            About SS Trading Korea
+            About Your Company
           </p>
           <h1 className="font-display font-bold text-3xl text-white mb-4 max-w-xl">
             Korea's Most Trusted Used Car Export Platform
@@ -66,7 +66,7 @@ export default function AboutUs() {
             </h2>
             <div className="space-y-4 font-body text-sm text-gray-600 leading-relaxed">
               <p>
-                SS Trading Korea was founded with one goal: to fix the trust problem in used car exports. Buyers in Dubai, Lagos, or Nairobi were purchasing vehicles sight-unseen, relying only on seller photos and verbal assurances.
+                Webforge was founded with one goal: to fix the trust problem in used car exports. Buyers in Dubai, Lagos, or Nairobi were purchasing vehicles sight-unseen, relying only on seller photos and verbal assurances.
               </p>
               <p>
                 We changed that by making the full Korean inspection report — the official 성능점검기록부 — available in 5 languages, verified with a QR code, and immutable once submitted.
@@ -118,8 +118,8 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
             {[
               { icon: MapPin,  label: "Location",       value: "Mapo-gu, Seoul",      sub: "Republic of Korea" },
-              { icon: Phone,   label: "Phone",          value: "+82-10-2705-8645",    sub: "Mon–Sat 09:00–19:00 KST" },
-              { icon: Mail,    label: "Email",          value: "info@sstrading.kr",   sub: "Response within 1 hour" },
+              { icon: Phone,   label: "Phone",          value: "+82-12-3456-7890",    sub: "Mon–Sat 09:00–19:00 KST" },
+              { icon: Mail,    label: "Email",          value: "info@yourcompany",   sub: "Response within 1 hour" },
             ].map(({ icon: Icon, label, value, sub }) => (
               <div key={label} className="flex items-center gap-4 p-8">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -140,8 +140,8 @@ export default function AboutUs() {
       {/* Footer */}
       <footer className="border-t border-gray-200 bg-white py-6">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-display font-bold text-sm" style={{ color: "#1A3C6E" }}>SS Trading Korea</p>
-          <p className="font-body text-xs text-gray-400">© 2025 SS Trading Korea. All rights reserved.</p>
+          <p className="font-display font-bold text-sm" style={{ color: "#1A3C6E" }}>company name</p>
+          <p className="font-body text-xs text-gray-400">© 2025 your company. All rights reserved.</p>
         </div>
       </footer>
     </div>
