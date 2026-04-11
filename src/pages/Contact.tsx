@@ -5,8 +5,8 @@ import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle } from "lu
 
 const COMPANY = {
   name: "Verified Car Pass",
-  phone: "+82-10-2705-8645",
-  whatsapp: "https://wa.me/821027058645",
+  phone: "+82-12-3456-7890",
+  whatsapp: "https://wa.me/",
   email: "info@verifiedcarpass.com",
   address: "Seoul, Republic of Korea",
   addressDetail: "Mapo-gu, Seoul 04108",
@@ -34,7 +34,7 @@ export default function Contact() {
     const msg = encodeURIComponent(
       `New inquiry from Verified Car Pass website\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCountry: ${form.country}\n\nMessage:\n${form.message}`
     );
-    window.open(`https://wa.me/821027058645?text=${msg}`, "_blank");
+    window.open(`https://wa.me/?text=${msg}`, "_blank");
     setSent(true);
   };
 
