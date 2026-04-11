@@ -54,7 +54,7 @@ export function Navbar() {
               onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
               onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.72)")}>
               <Phone className="w-3 h-3 flex-shrink-0" />
-              +82-10-2705-8645
+              +82-12-3456-7890
             </a>
             <a href="mailto:info@webforge"
               className="hidden sm:flex items-center gap-1.5 text-[11px] font-body transition-colors"
@@ -62,7 +62,7 @@ export function Navbar() {
               onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
               onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}>
               <Mail className="w-3 h-3 flex-shrink-0" />
-              info@sstrading.kr
+              info@webforge
             </a>
           </div>
 
